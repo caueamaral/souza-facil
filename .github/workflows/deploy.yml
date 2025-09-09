@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   deploy:
-    enviroment:
+    environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
@@ -30,6 +30,6 @@ jobs:
         with:
           path: .
 
-      -name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
